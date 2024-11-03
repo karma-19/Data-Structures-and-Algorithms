@@ -20,6 +20,9 @@ public class Main {
         treeNode.left.right = new TreeNode(4);
         treeNode.right.left = new TreeNode(5);
         treeNode.right.right = new TreeNode(6);
+        treeNode.left.right.right = new TreeNode(7);
+        treeNode.right.right.left = new TreeNode(8);
+        treeNode.right.right.left.right = new TreeNode(9);
 
         System.out.print("Original Preorder Traversal: ");
         PreOrderTraversal preOrderTraversal = new PreOrderTraversal();
@@ -36,6 +39,17 @@ public class Main {
         new LevelOrderTraversal(treeNode, true);
         System.out.print(" | ");
         new LevelOrderTraversal(treeNode, false);
+        System.out.println();
+
+        //***************************************************************************
+        System.out.print("Left View : ");
+        new LeftView(treeNode);
+        System.out.println();
+
+        //***************************************************************************
+        System.out.print("Right View: ");
+        new RightView(treeNode);
+        System.out.println();
 
     }
 }
